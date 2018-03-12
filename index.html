@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+	
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Kej-Mesk</title>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="manifest" href="manifest.json">
+<script>
+if ('serviceWorker' in navigator) {
+	window.addEventListener ('load', function() {
+		navigator.serviceWorker.register('sw.js').then (
+			function(registration) {
+				console.log('SW registration with scope : ', registration.scope); },
+			function (err) {
+				console.log ('SW registration failed: ', err);
+			});		
+	});		
+};
+		
+</script>
+<link rel="stylesheet" href="stumm.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="sweetalert.css">
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script src="sweetalert.min.js"></script>
+</head>
+
+<body onload="init()">
+<header>
+<div id="titl">
+ <p>K</p><p>e</p><p>J</p><p>-</p><p>M</p><p>e</p><p>s</p><p>K</p>              
+</div>   	
+</header>
+
+<section id="leur">
+<article id="kael">
+<p></p><p></p><p></p><p></p>
+<p></p><p></p><p></p><p></p>
+<p></p><p></p><p></p><p></p>	
+<p></p><p></p><p></p><p></p>
+</article>
+    
+<article id="respont">
+<p></p><p>KAS</p>
+</article>
+
+<article id="kemenn">
+<progress id="prog" max="20" value="0"></progress>
+<span></span>
+</article>
+    
+<footer id="nevez">
+<button type="button" class= "go" onClick='dilezel()';>dilezel</button>
+</footer>
+</section>
+
+<section id="digor">
+</section>
+
+<article id="kavadenn">
+</article>
+
+<footer id="echu">
+</br><button type="button" class= "go" onClick='da_c_houde()';>un allig...</button>
+</footer>
+
+<section id="araez">
+<h1>Ho kefridi</h1><p>
+Sevel gerioù gant al lizherennoù dispaket war ho skramm.
+Krogit e-barzh gant n'eus forzh pe lizherenn,
+ha dalc'hit da vont gant al lizherenn nes
+d'an hini gentañ, gant un trede nes d'an eil, ha c'hoazh.</p>
+    
+<h1>Peseurt gerioù 'ta ?</h1><p>
+* gerioù enno eus teir da eizh lizherenn d'ar muiañ</br>
+* ger kevrennek ebet !</br>
+* anv-verb pe anv-gwan-verb nemetken evit at verboù</p>
+    
+<h2>notenn a-bouez</h2><p>
+Geriadurig Kej-Mesk n'eo ket klok, na tost. Mankout a ra
+gerioù boutin-tre : a-ratozh-kaer eo ! 'mod all e vije re aes,
+hep pebr na holen 'vez divlaz ar soubenn...</p>
+</section> 
+
+<section id="traon">
+<img id="betekhenn" src="icones/bump.png"/>
+<img id="zikour" src="icones/penaos.png"/>
+<img id="distro" src="icones/bump.png"/>
+</section>
+
+<script type="text/javascript" src="km.js"></script>
+</body>
+
+</html>
