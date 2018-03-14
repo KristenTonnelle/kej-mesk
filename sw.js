@@ -2,26 +2,37 @@ var filesToCache = [
 'index.html',
 'km.js',
 'stumm.css',
-'jquery-1.11.1.js',
+'jquery-3.3.1.min.js',
 'sweetalert.min.js',
 'sweetalert.css',
-'fonts/EDITORS.ttf',
-'fonts/Hamerslag.ttf',
-'fonts/LANECANE.ttf',
 'fonts/LANENAR_.ttf',
-'fonts/monte-cristo.ttf',
 'icones/bump.png',
 'icones/d_ar_ger.png',
 'icones/penaos.png'
 ];
 
-var cacheName = 'km-1.0';
+var cacheName = 'km-0.2';
 self.addEventListener('install', function(e){
 	e.waitUntil(
 		caches.open(cacheName).then (function(cache) {
 			return cache.addAll(filesToCache);
 		})
 	);
+});
+
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
 });
 
 self.addEventListener('fetch', function(e) {
