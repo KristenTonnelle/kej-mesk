@@ -1,2 +1,9 @@
+@font-face {
+    font-family: 'Lane';
+    src: url('LANENAR_.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 body {margin: 0; padding: 0; background: green; overflow: hidden;}
-p {color: #ffffff; font-family: "Lane"; justify-content: center;}
+#titl {color: #ffffff; font-family: "Lane"; justify-content: center;}
