@@ -200,6 +200,7 @@ return taolennet;
 }
 
 function init() {
+if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 geriadur.sort();
 scores = getHighScores();
 if (scores[9]==null)
