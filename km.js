@@ -267,7 +267,7 @@ $('#kael p').click(function() {
 	 {$("#kael p:eq("+x+")").css("color", "green").css("cursor", "pointer");}
 	 });	
   $.each (gwenn, function (i, val){
-  $("#kael p:eq("+val+")").css("color", "green").css("font-weight", "bold").css("cursor", "cell");		
+  $("#kael p:eq("+val+")").css("color", "black").css("font-weight", "bold").css("cursor", "cell");		
   })	
  }
 })
