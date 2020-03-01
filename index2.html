@@ -25,6 +25,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 <link rel="manifest" href="manifest.json">
+<!--
 <script>
 if ('serviceWorker' in navigator) {
 	window.addEventListener ('load', function() {
@@ -35,10 +36,10 @@ if ('serviceWorker' in navigator) {
 				console.log ('SW registration failed: ', err);
 			});		
 	});		
-};
-		
+};	
 </script>
-<link rel="stylesheet" href="stumm.css" type="text/css">
+-->
+<link rel="stylesheet" href="stumm2.css" type="text/css">
 <link rel="stylesheet" type="text/css" href="sweetalert.css">
 <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 <script src="sweetalert.min.js"></script>
@@ -101,6 +102,23 @@ gerioù boutin-tre : a-ratozh-kaer eo ! 'mod all e vije re aes,
 hep pebr na holen 'vez divlaz ar soubenn...</p>
 </section> 
 
+<div id="stalaf_kloz">
+<div id="stalaf">
+<input type="radio" id="r1" name="rr" value="AES" onclick="handlezeClick(this);" />
+<label for="r1"><span></span>AES  3-8 lizherenn</label>
+<p>
+<input type="radio" id="r2" name="rr" value="DIAES" onclick="handlezeClick(this);" />
+<label for="r2"><span></span>DIAES 4-8 lizherenn </label>
+<p>
+<input type="radio" id="r3" name="rr" value="DIAOULEK" onclick="handlezeClick(this);" />
+<label for="r3"><span></span>DIAOULEK 5-8 lizherenn</label>
+<p>diwallit ! Diaoulekoc'h e c'hall bout al live AES eget an daou all : gerioù berr HA gerioù hir !</p>
+			
+<a href="#stalaf" class="digeri" aria-hidden="true">liveoù</a>
+<a href="#stalaf_kloz" class="serri" aria-hidden="true">serriñ</a>
+</div>
+</div>
+
 <section id="traon">
 <img id="betekhenn" src="icones/bump.png"/>
 <img id="zikour" src="icones/penaos.png"/>
@@ -108,7 +126,7 @@ hep pebr na holen 'vez divlaz ar soubenn...</p>
 <button id="live" type="button" class= "go" onClick='dilezel()';>live aes</button>
 </section>
 
-<script type="text/javascript" src="km.js"></script>
+<script type="text/javascript" src="km2.js"></script>
 </body>
 
 </html>
