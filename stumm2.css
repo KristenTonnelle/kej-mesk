@@ -306,3 +306,8 @@ cursor:pointer;
 input[type="radio"]:checked + label span {
 background:url(check_radio_sheet.png) -57px top no-repeat;
 }
+#titl_live, #pou {
+text-align: center; font-weight: bold; 
+color: #000000; background-color: white;
+}
+#pou {margin-bottom: 0px;}
