@@ -35,8 +35,7 @@ if ('serviceWorker' in navigator) {
 				console.log ('SW registration failed: ', err);
 			});		
 	});		
-};
-		
+};	
 </script>
 <link rel="stylesheet" href="stumm.css" type="text/css">
 <link rel="stylesheet" type="text/css" href="sweetalert.css">
@@ -101,11 +100,30 @@ gerioù boutin-tre : a-ratozh-kaer eo ! 'mod all e vije re aes,
 hep pebr na holen 'vez divlaz ar soubenn...</p>
 </section> 
 
+<div id="stalaf_kloz">
+<div id="stalaf">
+<div id="titl_live">
+DIBABIT HO LIVE
+</div></p>
+<input type="radio" id="r1" name="rb" value="0" onclick="handlezeClick(this);" />
+<label for="r1"><span></span>AES  3-8 lizherenn</label>
+<p>
+<input type="radio" id="r2" name="rb" value="1" onclick="handlezeClick(this);" />
+<label for="r2"><span></span>DIAES 4-8 lizherenn </label>
+<p>
+<input type="radio" id="r3" name="rb" value="2" onclick="handlezeClick(this);" />
+<label for="r3"><span></span>DIAOULEK 5-8 lizherenn</label>
+<p id="pou">Diwallit ! Diaoulekoc'h e c'hall bout al live AES eget an daou all : gerioù berr HA gerioù hir !</p>
+			
+<a href="#stalaf" class="digeri" aria-hidden="true">liveoù</a>
+<a href="#stalaf_kloz" class="serri" aria-hidden="true">serriñ</a>
+</div>
+</div>
+
 <section id="traon">
 <img id="betekhenn" src="icones/bump.png"/>
 <img id="zikour" src="icones/penaos.png"/>
 <img id="distro" src="icones/bump.png"/>
-<button id="live" type="button" class= "go" onClick='dilezel()';>live aes</button>
 </section>
 
 <script type="text/javascript" src="km.js"></script>

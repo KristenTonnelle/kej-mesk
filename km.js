@@ -31,6 +31,9 @@ var taol_nv = 0;
 var gwenn = [];
 var diskouezet = 0;
 var scores = [];
+var live = 0;
+var liveou = [3,4,5];
+var live_skr = ['AES ', 'DIAES ', 'DIAOULEK ']; 
 
 /*
 diskas gwir mard ema an div gell a & b stok-ha-stok ; gaou mod all
@@ -66,7 +69,7 @@ do
  if (ger == gerig) {
    respont = 1;
    e_barzh = geriadur.indexOf(ger);
-   if (e_barzh > -1) {da_gavout[da_gavout.length]=ger;}
+   if ((e_barzh > -1) && (hirder_gwir(ger) >= liveou[live])) {da_gavout[da_gavout.length]=ger;}
   }	
  if (ger > gerig) {min = kreiz;}
  if (ger < gerig) {max = kreiz;}
@@ -200,11 +203,14 @@ return taolennet;
 }
 
 function init() {
-if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
+// if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 geriadur.sort();
+$('#nevez').css("display", "none");
+$('#stalaf_kloz').css("display", "block");
 scores = getHighScores();
 if (scores[9]==null)
 {for (var j = 0 ; j < 10 ; j++) {scores[j] = "0;--------;01-01-2000";}}
+$('input:radio[name=rb]')[getLevel()].checked = true;
 do
 {
 kavet = 0; chom = 0; hir_provo = 3;
@@ -259,6 +265,8 @@ $('#kael p').click(function() {
   $(this).css ("color", "white");
   $('#respont p:first-child').append(tra);
   taol_nv++;
+  $('#nevez').css("display", "block");
+  $('#stalaf_kloz').css("display", "none");
   $('#kael p').css("color", "grey");
   $('#kael p').css("cursor", "crosshair");
   $.each(tuiou, function(i, val){
@@ -319,6 +327,7 @@ if (diskouezet==0) {
 $('#zikour').click (function() {
  $('#leur').css ("display","none");
  $('#kavadenn').css ("display","none");
+ $('#stalaf_kloz').css ("display","none");
  $('#zikour').css("visibility","hidden");
  $('#distro').css("visibility","visible");
  $('#araez').css("display","block"); 
@@ -329,6 +338,7 @@ $('#distro').click (function() {
  $('#distro').css("visibility","hidden");
  $('#araez').css("display","none"); 
  $('#kavadenn').css("display","block");
+ $('#stalaf_kloz').css ("display","block");
  $('#leur').css ("display","block");
 })
 
@@ -375,4 +385,26 @@ return n;
 
 function getHighScores(){
 return JSON.parse(localStorage.getItem("ar_re_wella")) || new Array(10);
+}
+
+function getLevel(){
+return JSON.parse(localStorage.getItem("live_o_ren")) || 0;
+}
+
+function hirder_gwir(gerig)
+{
+ var lengz = gerig.length;
+ var traou =["C", "Ç", "Ù"];
+ for (var i=0; i < 3 ; i++) {
+  etre= gerig.split(traou[i]);
+  lengz += etre.length - 1;
+  }
+return lengz;
+}
+function handlezeClick(rb) {
+live = document.querySelector('input[name=rb]:checked').value;
+localStorage.setItem("live_o_ren", JSON.stringify(live));
+init();
+//var myID = document.getElementById('testing');
+//myID.innerHTML= "live = " + livead;
 }
