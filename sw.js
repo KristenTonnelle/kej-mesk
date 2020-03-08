@@ -6,12 +6,13 @@ var filesToCache = [
 'sweetalert.min.js',
 'sweetalert.css',
 'fonts/LANENAR_.ttf',
+'check_radio_sheet.png',
 'icones/bump.png',
 'icones/d_ar_ger.png',
 'icones/penaos.png'
 ];
 
-var cacheName = 'km-0.3';
+var cacheName = 'km-1.0';
 self.addEventListener('install', function(e){
 	e.waitUntil(
 		caches.open(cacheName).then (function(cache) {
