@@ -12,7 +12,7 @@ var filesToCache = [
 'icones/penaos.png'
 ];
 
-var cacheName = 'km-1.0';
+var cacheName = 'km-1.1';
 self.addEventListener('install', function(e){
 	e.waitUntil(
 		caches.open(cacheName).then (function(cache) {
