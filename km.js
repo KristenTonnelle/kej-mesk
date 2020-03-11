@@ -203,7 +203,7 @@ return taolennet;
 }
 
 function init() {
-// if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
+if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 geriadur.sort();
 $('#nevez').css("display", "none");
 $('#stalaf_kloz').css("display", "block");
