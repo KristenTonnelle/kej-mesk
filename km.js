@@ -211,6 +211,7 @@ scores = getHighScores();
 if (scores[9]==null)
 {for (var j = 0 ; j < 10 ; j++) {scores[j] = "0;--------;01-01-2000";}}
 $('input:radio[name=rb]')[getLevel()].checked = true;
+live=getLevel();
 do
 {
 kavet = 0; chom = 0; hir_provo = 3;
