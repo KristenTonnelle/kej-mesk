@@ -206,12 +206,15 @@ function init() {
 if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 geriadur.sort();
 $('#nevez').css("display", "none");
+$('#live_').css("display", "none");	
 $('#stalaf_kloz').css("display", "block");
 scores = getHighScores();
 if (scores[9]==null)
 {for (var j = 0 ; j < 10 ; j++) {scores[j] = "0;--------;01-01-2000";}}
-$('input:radio[name=rb]')[getLevel()].checked = true;
-live=getLevel();
+live= getLevel();
+$('input:radio[name=rb]')[live].checked = true;
+var va_live = document.getElementById('live_');
+va_live.innerHTML = "<p>live " + live_skr[live] + "<p>";
 do
 {
 kavet = 0; chom = 0; hir_provo = 3;
@@ -267,6 +270,7 @@ $('#kael p').click(function() {
   $('#respont p:first-child').append(tra);
   taol_nv++;
   $('#nevez').css("display", "block");
+  $('#live_').css("display", "block");		
   $('#stalaf_kloz').css("display", "none");
   $('#kael p').css("color", "grey");
   $('#kael p').css("cursor", "crosshair");
@@ -406,6 +410,4 @@ function handlezeClick(rb) {
 live = document.querySelector('input[name=rb]:checked').value;
 localStorage.setItem("live_o_ren", JSON.stringify(live));
 init();
-//var myID = document.getElementById('testing');
-//myID.innerHTML= "live = " + livead;
 }
