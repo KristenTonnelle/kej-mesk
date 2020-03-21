@@ -294,21 +294,21 @@ va_regExpr = /C'H/g; ger = ger.replace (va_regExpr, 'Ç');
 va_regExpr = /OÙ/g; ger = ger.replace (va_regExpr, 'Ù');
 opala = kudenn.indexOf (ger);
 if (opala > -1) {
- kavet++; kemennadur();
+ kavet++; kemennadur(); kloc_her ('kloc_hig.ogg');
  kudenn.splice (opala, 1);
  bet_kavet[bet_kavet.length]=gerig;
  bet_kavet.sort(function (a, b) {return a.localeCompare(b);});
  if (kavet==1){
  $('#zikour').css("visibility","hidden");
  $('#betekhenn').css ("visibility", "visible");}    
- }
+ } else {kloc_her('klogorenn.ogg');}
 if (kavet==chom) {
  $('#leur').css ("display", "none");
  $('#kavadenn').css("opacity", "0");
  $('#betekhenn').css("visibility", "hidden");
  if (kavet > parseInt(scores[9])) {addScore(kavet);}
  else {var msg ='</br></br><p class="hi_sco">'+"Deuet eo ganeoc'h !";
-  $("#digor").html(msg);} 
+       kloc_her ('strakadeg-daouarn.ogg'); $("#digor").html(msg);} 
  $('#zikour').css("visibility","hidden");
  $('#echu').css("display","block");
  $('#digor').css("display", ""); 
@@ -348,6 +348,7 @@ $('#distro').click (function() {
 })
 
 function addScore(score){
+kloc_her ('korn-boud.ogg');
 swal({
   title: "Kavet ho-peus !",
   text: "hoc'h anv mar-plij:",
@@ -410,4 +411,13 @@ function handlezeClick(rb) {
 live = document.querySelector('input[name=rb]:checked').value;
 localStorage.setItem("live_o_ren", JSON.stringify(live));
 init();
+}
+function kloc_her(brall)
+{
+var audio = document.getElementById('skignerez');
+let doser = "son/";
+brall= doser + brall;
+audio.src = brall;
+audio.play();
+return (false);
 }
