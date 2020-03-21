@@ -1,6 +1,8 @@
 # kej-mesk
 ur c'hoari gerioù brezhonek
 
+stumm 1.3 21-03-2020
+ouzhpennet : trouziouigoù
 stumm 1.2 14-03-2020
 live o ren lakaet war-wel e traoñ ar skramm
 stumm 1.1 11-03-2020
