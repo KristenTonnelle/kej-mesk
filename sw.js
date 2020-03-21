@@ -10,9 +10,13 @@ var filesToCache = [
 'icones/bump.png',
 'icones/d_ar_ger.png',
 'icones/penaos.png'
+'son/kloc_hig.ogg'
+'son/strakadeg-daouarn.ogg'
+'son/korn-boud.ogg'
+'son/klogorenn.ogg'
 ];
 
-var cacheName = 'km-1.2';
+var cacheName = 'km-1.3';
 self.addEventListener('install', function(e){
 	e.waitUntil(
 		caches.open(cacheName).then (function(cache) {
