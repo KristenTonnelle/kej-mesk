@@ -6,6 +6,7 @@ var filesToCache = [
 'sweetalert.min.js',
 'sweetalert.css',
 'fonts/LANENAR_.ttf',
+'fonts/Antonio-Regular.ttf',
 'check_radio_sheet.png',
 'icones/bump.png',
 'icones/d_ar_ger.png',
