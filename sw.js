@@ -11,9 +11,9 @@ var filesToCache = [
 'icones/bump.png',
 'icones/d_ar_ger.png',
 'icones/penaos.png'
-'son/kloc_hig.ogg'
-'son/strakadeg-daouarn.ogg'
-'son/korn-boud.ogg'
+'son/kloc_hig.ogg',
+'son/strakadeg-daouarn.ogg',
+'son/korn-boud.ogg',
 'son/klogorenn.ogg'
 ];
 
