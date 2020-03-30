@@ -10,7 +10,7 @@ var filesToCache = [
 'check_radio_sheet.png',
 'icones/bump.png',
 'icones/d_ar_ger.png',
-'icones/penaos.png'
+'icones/penaos.png',
 'son/kloc_hig.ogg',
 'son/strakadeg-daouarn.ogg',
 'son/korn-boud.ogg',
