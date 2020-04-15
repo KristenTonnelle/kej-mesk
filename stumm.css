@@ -10,7 +10,8 @@
     font-weight: normal;
     font-style: normal;
     }
-body {margin: 0; padding: 0; background: green; overflow: hidden;}
+body {margin: 0; padding: 0; background: green; overflow: hidden;
+-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; }
 #zikour {position: absolute; right: 8px; bottom: 8px;}
 #zikour:hover {cursor: pointer;}
 #betekhenn {visibility: hidden; position: fixed; right: 8px; bottom: 8px;}
