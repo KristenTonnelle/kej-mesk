@@ -38,7 +38,8 @@
 	"display": "standalone",
 	"orientation": "portrait",
 	"theme_color": "#008000",
-	"background_color": "#008000"
+	"background_color": "#008000",
+	"prefer_related_applications": false
 }
 
 
