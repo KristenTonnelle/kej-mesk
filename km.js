@@ -36,6 +36,31 @@ var liveou = [3,4,5];
 var live_skr = ['AES ', 'DIAES ', 'DIAOULEK ']; 
 
 /*
+merañ ar bouton a ginnig ar sterniadur
+*/
+let deferredPrompt;
+const installButton  = document.getElementById("install_button");
+
+window.addEventListener ("beforeinstallprompt", e => {
+	e.preventDefault();
+	deferredPrompt = e;
+	installButton.hidden = false;
+	installButton.addEventListener("click", installApp);
+});
+
+function installApp() {
+	deferredPrompt.prompt();
+	installButton.disabled = true;
+	deferredPrompt.userChoice.then (choiceResult => {
+		if (choiceResult.outcome === "accepted") {
+			installButton.hidden = true;
+		}
+		installButton.disabled = false;
+		deferredPrompt = null;
+	});
+}
+
+/*
 diskas gwir mard ema an div gell a & b stok-ha-stok ; gaou mod all
 */
 function ok(a, b) {
