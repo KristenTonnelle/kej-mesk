@@ -69,16 +69,6 @@ if ((b > - 1) && (b < 16) && (Math.abs((a % 4) - (b % 4)) != 3))
 }
 
 /*
-dilemel an doublennoù en daolennad
-*/
-function un_tamm_kempenn(array) {
-var i, j, len = array.length, out = [], obj = {};
-for (i = 0; i < len; i++) {obj[array[i]] = 0;}
-for (j in obj) {out[out.length]=j;}
-return out;
-}
-
-/*
 diskas 1 ma c'h a d'ober 'ger' lizherennoù kenta ur poz er geriadur ; mod all
 ma'z a d'ober ar poz en e bezh ez eo ouzhpennet d'an daolennad 'da_gavout'
 */
@@ -174,7 +164,7 @@ for (i = 0 ; i < 16 ; i++) {
  }
 }
 echui();
-kudenn = un_tamm_kempenn(da_gavout);
+kudenn = [... new Set (da_gavout)];
 kudenn.sort(function (a, b) {return a.localeCompare(b);});
 }
 	
