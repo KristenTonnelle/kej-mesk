@@ -34,7 +34,9 @@ var scores = [];
 var live = 0;
 var liveou = [3,4,5];
 var live_skr = ['AES ', 'DIAES ', 'DIAOULEK ']; 
-
+let kudennou_kent = [];
+let kudenn_diwezha = [];
+let kudenn_eil_diwezha = [];
 /*
 merañ ar bouton a ginnig ar sterniadur
 */
@@ -84,7 +86,7 @@ do
  if (ger == gerig) {
    respont = 1;
    e_barzh = geriadur.indexOf(ger);
-   if ((e_barzh > -1) && (hirder_gwir(ger) >= liveou[live])) {da_gavout[da_gavout.length]=ger;}
+   if ((e_barzh > -1) && (hirder_gwir(ger) >= liveou[live]) && (kudennou_kent.indexOf(ger)==-1)) {da_gavout.push (ger);}
   }	
  if (ger > gerig) {min = kreiz;}
  if (ger < gerig) {max = kreiz;}
@@ -220,6 +222,9 @@ return taolennet;
 function init() {
 // if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 geriadur.sort();
+kudenn_eil_diwezha = JSON.parse(localStorage.getItem("eil_diwezha_kudenn")) || new Array();
+kudenn_diwezha = JSON.parse(localStorage.getItem("diwezha_kudenn")) || new Array();
+kudennou_kent = kudenn_diwezha.concat(kudenn_eil_diwezha); 
 $('#nevez').css("display", "none");
 $('#live_').css("display", "none");	
 $('#stalaf_kloz').css("display", "block");
@@ -244,6 +249,8 @@ for (var i = 0 ; i < 16 ; i++){
 klask();
 chom = kudenn.length;}
 while (chom < 10);
+kudenn_eil_diwezha = kudenn_diwezha; localStorage.setItem("eil_diwezha_kudenn", JSON.stringify(kudenn_eil_diwezha));
+kudenn_diwezha = kudenn; localStorage.setItem("diwezha_kudenn", JSON.stringify(kudenn_diwezha));
 kemennadur();
 $('#digor').css("display","none");
 $('#leur').css("display","block");
