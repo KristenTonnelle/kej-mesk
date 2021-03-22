@@ -220,7 +220,7 @@ return taolennet;
 }
 
 function init() {
-// if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
+if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 geriadur.sort();
 kudenn_eil_diwezha = JSON.parse(localStorage.getItem("eil_diwezha_kudenn")) || new Array();
 kudenn_diwezha = JSON.parse(localStorage.getItem("diwezha_kudenn")) || new Array();
