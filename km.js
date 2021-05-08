@@ -87,7 +87,7 @@ do
  if (ger == gerig) {
    respont = 1;
    e_barzh = geriadur.indexOf(ger);
-   if ((e_barzh > -1) && (hirder_gwir(ger) >= liveou[live]) && (kudennou_kent.indexOf(ger)==-1)) {da_gavout.push (ger);}
+   if ((e_barzh > -1) && (hirder_gwir(ger) >= liveou[live])) {da_gavout.push (ger);}
   }	
  if (ger > gerig) {min = kreiz;}
  if (ger < gerig) {max = kreiz;}
