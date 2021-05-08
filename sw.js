@@ -17,7 +17,7 @@ var filesToCache = [
 'son/klogorenn.ogg'
 ];
 
-var cacheName = 'km-1.6';
+var cacheName = 'km-1.7';
 self.addEventListener('install', function(e){
 	e.waitUntil(
 		caches.open(cacheName).then (function(cache) {
