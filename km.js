@@ -223,7 +223,7 @@ return taolennet;
 function init() {
 if (!localStorage.getItem('gertremen')) {document.location.href="https://www.parkallann.bzh/stripped/hezoug.html";}
 
-geriadur.sort();
+geriaoueg.sort();
 kudenn_eil_diwezha = JSON.parse(localStorage.getItem("eil_diwezha_kudenn")) || new Array();
 kudenn_diwezha = JSON.parse(localStorage.getItem("diwezha_kudenn")) || new Array();
 kudennou_kent = kudenn_diwezha.concat(kudenn_eil_diwezha);
