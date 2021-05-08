@@ -1,8 +1,11 @@
 # kej-mesk
 ur c'hoari gerioù brezhonek
 
+stumm 1.7 08-05-2021
+ar gerioù bet da gavout en eil hag eil diwezhañ partiadenn n'int ket kinniget ken
+
 stumm 1.5 07-03-2021
-ar gerioù bet da gavout en eil hag eil diwhezhañ partiadenn n'int ket da gavout ken, ha pa c'hallfer o sevel gant al lizherennoù kinniget
+ar gerioù bet da gavout en eil hag eil diwezhañ partiadenn n'int ket da gavout ken, ha pa c'hallfer o sevel gant al lizherennoù kinniget
 
 stumm 1.3 21-03-2020
 ouzhpennet : trouziouigoù
