@@ -1,0 +1,9 @@
+
+<header>
+<script>
+function lemel()
+navigator.serviceWorker.getRegistrations().then( function(registrations) { for(let registration of registrations) { registration.unregister(); 
+alert ('SW lamet !');} }); 
+</script>
+<body onLoad='lemel();'>
+</body>
