@@ -1,6 +1,7 @@
 var filesToCache = [
 'index.html',
 'km.js',
+'geriaoueg.js',
 'stumm.css',
 'jquery-3.3.1.min.js',
 'sweetalert.min.js',
