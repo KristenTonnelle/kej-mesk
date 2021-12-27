@@ -227,8 +227,7 @@ geriaoueg.sort();
 kudenn_eil_diwezha = JSON.parse(localStorage.getItem("eil_diwezha_kudenn")) || new Array();
 kudenn_diwezha = JSON.parse(localStorage.getItem("diwezha_kudenn")) || new Array();
 kudennou_kent = kudenn_diwezha.concat(kudenn_eil_diwezha);
-geriadur = geriaoueg;
-geriadur = geriadur.filter(x => !kudennou_kent.includes(x));
+geriadur = geriaoueg.filter(x => !kudennou_kent.includes(x));
 
 $('#nevez').css("display", "none");
 $('#live_').css("display", "none");	
